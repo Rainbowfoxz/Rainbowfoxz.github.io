@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Опрос о чат-ботах</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cases.html">Кейсы</a></li>
+                <li><a href="faq.html">Часто задаваемые вопросы</a></li>
+                <li><a href="about.html">О проекте</a></li>
+                <li><a href="survey.html">Опрос</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="survey">
+            <h2>Ваше мнение важно для нас!</h2>
+            <form action="#" method="post">
+               
+
+                <div class="form-group">
+                    <label>Как часто вы пользуетесь чат-ботами?</label>
+                    <select name="usage_frequency" id="usage_frequency" required>
+                        <option value="">Выберите частоту</option>
+                        <option value="ежедневно">Ежедневно</option>
+                        <option value="несколько раз в неделю">Несколько раз в неделю</option>
+                        <option value="раз в неделю">Раз в неделю</option>
+                        <option value="реже раз в неделю">Реже раз в неделю</option>
+                        <option value="никогда">Никогда</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>В каких социальных сетях вы используете чат-ботов? (выберите все подходящие)</label><br>
+                    <input type="checkbox" id="facebook" name="social_networks" value="Facebook">
+                    <label for="facebook">Facebook</label><br>
+                    <input type="checkbox" id="vk" name="social_networks" value="ВКонтакте">
+                    <label for="vk">ВКонтакте</label><br>
+                    <input type="checkbox" id="whatsapp" name="social_networks" value="WhatsApp">
+                    <label for="whatsapp">WhatsApp</label><br>
+                    <input type="checkbox" id="telegram" name="social_networks" value="Telegram">
+                    <label for="telegram">Telegram</label><br>
+                    <input type="checkbox" id="instagram" name="social_networks" value="Instagram">
+                    <label for="instagram">Instagram</label><br>
+                </div>
+
+                <div class="form-group">
+                    <label>Что вам больше помогает?</label><br>
+                    <input type="radio" id="bot_help" name="help_preference" value="бот">
+                    <label for="bot_help">Помощь от бота</label><br>
+                    <input type="radio" id="human_help" name="help_preference" value="человек">
+                    <label for="human_help">Помощь от человека</label><br>
+                </div>
+
+                <!-- Новый вопрос о функциях чат-ботов -->
+                <div class="form-group">
+                    <label>Какие функции чат-ботов для вас наиболее важны? (выберите все подходящие)</label><br>
+                    <input type="checkbox" id="24_7_support" name="important_features" value="Круглосуточная поддержка">
+                    <label for="24_7_support">Круглосуточная поддержка</label><br>
+                    <input type="checkbox" id="быстрый_ответ" name="important_features" value="Быстрые ответы на вопросы">
+                    <label for="быстрый_ответ">Быстрые ответы на вопросы</label><br>
+                    <input type="checkbox" id="персонализация" name="important_features" value="Персонализированные рекомендации">
+                    <label for="персонализация">Персонализированные рекомендации</label><br>
+                  <br>
+                </div>
+
+                <!-- Новый вопрос об опыте взаимодействия -->
+                <div class="form-group">
+                    <label>Какой у вас опыт взаимодействия с чат-ботами?</label><br>
+                    <select name="experience_level" id="experience_level" required>
+                        <option value="">Выберите уровень опыта</option>
+                        <option value="начинающий">Начинающий</option>
+                        <option value="средний">Средний</option>
+                        <option value="опытный">Опытный</option>
+                        <option value="эксперт">Эксперт</option>
+                    </select>
+                </div>
+
+                <!-- Новый вопрос о языке общения -->
+              
+
+                <button type="submit" class="opr">Отправить отзыв</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2025 Чат-боты в социальных сетях. Киселёв Данил и Дубровин Арсений</p>
+    </footer>
+
+    <!-- Можно добавить JavaScript для обработки формы -->
+    <script>
+        let button = document.querySelector('.opr')
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Спасибо за ваш отзыв!');
+            button.classList.add('touched')
+            console.log(button)
+            button.type ='button'
+            button.textContent = 'спасибо за участие!'
+            // Здесь можно добавить код для отправки данных на сервер
+        });
+        
+    </script>
+</body>
+</html>

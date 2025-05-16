@@ -1,0 +1,157 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.6s ease; /* Плавный переход фона */
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease; /* Анимация появления */
+}
+header h1{
+    color: white
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Цвет при наведении */
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #007bff;
+    animation: slideIn 0.7s ease; /* Анимация для заголовков */
+}
+
+#survey {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    opacity: 0; /* Начальное состояние для анимации */
+    animation: fadeInUp 0.7s forwards; /* Анимация появления */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Плавный переход цвета рамки */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #007bff; /* Цвет рамки при фокусе */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Плавный переход фона и масштабирования */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+img{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.guide{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+label, input{
+    display: inline;
+}
+.touched{
+    background-color: #69b1ff;
+    cursor:not-allowed;
+}
+.touched:hover{
+    background-color:#69b1ff; /* Цвет кнопки при наведении */
+    transform: scale(1); /* Увеличение кнопки при наведении */
+}
