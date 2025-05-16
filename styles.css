@@ -155,3 +155,6 @@ label, input{
     background-color:#69b1ff; /* Цвет кнопки при наведении */
     transform: scale(1); /* Увеличение кнопки при наведении */
 }
+img{
+    max-width: 100vw;
+}
